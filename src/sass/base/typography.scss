@@ -1,0 +1,27 @@
+@use '../util' as *;
+
+@import url('https://fonts.googleapis.com/css?family=Red%20Hat%20Display:700|Red%20Hat%20Text:400');
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+}
+// prettier-ignore
+h1, h2, h3, h4, h5 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+}
+// prettier-ignore
+html {font-size: 100%;} /* 16px */
+// prettier-ignore
+h1 {font-size: rem(67.36);}
+// prettier-ignore
+h2 {font-size: rem(50.56);}
+// prettier-ignore
+h3 {font-size: rem(37.92);}
+// prettier-ignore
+h4 {font-size: rem(28.48);}
+// prettier-ignore
+h5 {font-size: rem(21.28);}
+// prettier-ignore
+small {font-size: rem(12);}

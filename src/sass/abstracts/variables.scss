@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+:root {
+  --ff-body: 'Red Hat Text', Helvetica, Arial, sans-serif;
+  --ff-heading: 'Red Hat Display', Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: 163 28 5;
+    --background: 165 33 93;
+    --primary: 162 45 28;
+    --secondary: 165 53 69;
+    --accent: 165 61 43;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: 163 28 95;
+    --background: 165 33 7;
+    --primary: 162 45 72;
+    --secondary: 165 53 31;
+    --accent: 165 61 57;
+  }
+}
+
+// :root[data-theme="light"] {
+//   --text: 163 28 5;
+//   --background: 165 33 93;
+//   --primary: 162 45 28;
+//   --secondary: 165 53 69;
+//   --accent: 165 61 43;
+// }
+// :root[data-theme="dark"] {
+//   --text: 163 28 95;
+//   --background: 165 33 7;
+//   --primary: 162 45 72;
+//   --secondary: 165 53 31;
+//   --accent: 165 61 57;
+// }
