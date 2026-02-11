@@ -1,0 +1,45 @@
+@use '../util' as *;
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: rem(2) solid transparent;
+  border-radius: rem(8);
+  font-family: var(--ff-mono);
+  font-size: inherit;
+  height: rem(50);
+  padding-inline: rem(15);
+  color: hsl(from var(--text) h s l);
+
+  &-primary {
+    background: hsl(from var(--primary) h s l);
+    border-color: hsl(from var(--primary) h s l);
+    color: hsl(from var(--background) h s l);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus-visible {
+      background: hsl(from var(--primary) h s 50%);
+      border-color: hsl(from var(--primary) h s 50%);
+    }
+  }
+
+  &-secondary {
+    border-color: hsl(from var(--secondary) h s l);
+    color: hsl(from var(--secondary) h s l);
+    transition: var(--transition);
+
+    &:hover,
+    &:focus-visible {
+      background: hsl(from var(--secondary) h s l);
+      color: hsl(from var(--background) h s l);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    height: rem(35);
+  }
+}

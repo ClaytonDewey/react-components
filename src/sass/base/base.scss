@@ -13,8 +13,8 @@ body {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  background: hsl(var(--background));
-  color: hsl(var(--text));
+  background: hsl(from var(--background) h s l);
+  color: hsl(from var(--text) h s l);
 }
 
 body {
@@ -36,4 +36,10 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  max-width: rem(1320);
+  margin-inline: auto;
+  padding-block: rem(40);
 }

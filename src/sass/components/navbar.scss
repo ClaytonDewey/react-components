@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: rem(1320);
+  margin-inline: auto;
+
+  h1 {
+    font-size: rem(21.28);
+    text-transform: uppercase;
+  }
+
+  > ul {
+    list-style: none;
+    display: flex;
+
+    li a {
+      font: var(--ff-mono);
+      text-decoration: none;
+      color: var(--text);
+      padding: rem(5) rem(15);
+    }
+  }
+}

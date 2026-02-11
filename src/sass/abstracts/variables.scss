@@ -1,40 +1,245 @@
 @use '../util' as *;
 
 :root {
+  --text: #09100e;
+  --background: #e7f3f0;
+  --primary: #276854;
+  --secondary: #86dac5;
+  --accent: #2bb18f;
+
   --ff-body: 'Red Hat Text', Helvetica, Arial, sans-serif;
   --ff-heading: 'Red Hat Display', Helvetica, Arial, sans-serif;
-}
+  --ff-mono: 'Red Hat Mono', mono;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: 163 28 5;
-    --background: 165 33 93;
-    --primary: 162 45 28;
-    --secondary: 165 53 69;
-    --accent: 165 61 43;
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
   }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: 163 28 95;
-    --background: 165 33 7;
-    --primary: 162 45 72;
-    --secondary: 165 53 31;
-    --accent: 165 61 57;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
   }
 }
 
-// :root[data-theme="light"] {
-//   --text: 163 28 5;
-//   --background: 165 33 93;
-//   --primary: 162 45 28;
-//   --secondary: 165 53 69;
-//   --accent: 165 61 43;
+.light-dark-mode {
+  background: var(--background);
+  color: var(--text);
+  height: 100vh;
+  transition: var(--transition);
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #0d1716;
+//     --background: #edf8f5;
+//     --primary: #277268;
+//     --secondary: #81dfd3;
+//     --accent: #23c7b2;
+//   }
 // }
-// :root[data-theme="dark"] {
-//   --text: 163 28 95;
-//   --background: 165 33 7;
-//   --primary: 162 45 72;
-//   --secondary: 165 53 31;
-//   --accent: 165 61 57;
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #e8f2f1;
+//     --background: #07110f;
+//     --primary: #8dd8ce;
+//     --secondary: #1f7d71;
+//     --accent: #37dcc7;
+//   }
+// }
+
+[data-theme='dark'] {
+  --text: #eff6f4;
+  --background: #0c1815;
+  --primary: #97d8c4;
+  --secondary: #257964;
+  --accent: #4ed4b3;
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #10140f;
+//     --background: #f3f7f3;
+//     --primary: #386831;
+//     --secondary: #8ad080;
+//     --accent: #3fb030;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #ecf0eb;
+//     --background: #080c08;
+//     --primary: #9ece97;
+//     --secondary: #387f2f;
+//     --accent: #5ecf4f;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #121b0e;
+//     --background: #f0f8ed;
+//     --primary: #356b1e;
+//     --secondary: #97e675;
+//     --accent: #48c214;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #e7f0e3;
+//     --background: #0a1107;
+//     --primary: #abe194;
+//     --secondary: #3b8819;
+//     --accent: #70eb3b;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #151409;
+//     --background: #f9f8f0;
+//     --primary: #615d23;
+//     --secondary: #d5cf7c;
+//     --accent: #b2a934;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #f6f5ea;
+//     --background: #100f06;
+//     --primary: #dbd79c;
+//     --secondary: #817b2a;
+//     --accent: #cbc24e;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #151413;
+//     --background: #f4f1ec;
+//     --primary: #6b5229;
+//     --secondary: #e3bc7d;
+//     --accent: #c88314;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #ecebea;
+//     --background: #13100b;
+//     --primary: #d6bd94;
+//     --secondary: #825b1c;
+//     --accent: #eba637;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #110e0d;
+//     --background: #f2eae8;
+//     --primary: #643026;
+//     --secondary: #e19384;
+//     --accent: #bf3318;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #f2efee;
+//     --background: #160e0c;
+//     --primary: #d9a59a;
+//     --secondary: #7d2e1e;
+//     --accent: #e85f42;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #090e16;
+//     --background: #ebf1fa;
+//     --primary: #17407d;
+//     --secondary: #6ea3f2;
+//     --accent: #0663ef;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #e9eef6;
+//     --background: #050b14;
+//     --primary: #82abe8;
+//     --secondary: #0d4291;
+//     --accent: #106df9;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #18130c;
+//     --background: #faf8f5;
+//     --primary: #a78358;
+//     --secondary: #acd3ab;
+//     --accent: #79b991;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #f3eee7;
+//     --background: #0a0805;
+//     --primary: #a78358;
+//     --secondary: #2d542c;
+//     --accent: #46865d;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #130807;
+//     --background: #f9edeb;
+//     --primary: #7a271a;
+//     --secondary: #ea7d6c;
+//     --accent: #c62810;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #f8edec;
+//     --background: #140806;
+//     --primary: #e59285;
+//     --secondary: #932615;
+//     --accent: #ef5139;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #171717;
+//     --background: #e9eaec;
+//     --primary: #404754;
+//     --secondary: #a1abbf;
+//     --accent: #4f6082;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #e9e9e9;
+//     --background: #121315;
+//     --primary: #acb3bf;
+//     --secondary: #414b5f;
+//     --accent: #7c8daf;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --text: #06130d;
+//     --background: #e2f8ed;
+//     --primary: #157a46;
+//     --secondary: #61efa8;
+//     --accent: #09dc73;
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --text: #ecf9f3;
+//     --background: #071d12;
+//     --primary: #85eab6;
+//     --secondary: #109e57;
+//     --accent: #23f68c;
+//   }
 // }
