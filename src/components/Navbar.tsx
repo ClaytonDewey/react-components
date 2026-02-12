@@ -27,7 +27,7 @@ const Navbar = ({ handleToggle, theme }: NavbarProps) => {
         </li>
       </ul> */}
       <Button onClick={handleToggle}>
-        {theme === 'light' ? <BiSun /> : <BiMoon />}
+        {theme === 'dark' ? <BiSun /> : <BiMoon />}
       </Button>
     </nav>
   );
