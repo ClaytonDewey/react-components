@@ -1,7 +1,5 @@
 import { Button } from './Button';
-// import { IoIosSunny, IoIosMoon } from 'react-icons/io';
-// import { FaRegSun, FaRegMoon } from 'react-icons/fa';
-import { BiSun, BiMoon } from 'react-icons/bi';
+import { Icon } from '../svg';
 
 interface NavbarProps {
   handleToggle: () => void;
@@ -27,7 +25,7 @@ const Navbar = ({ handleToggle, theme }: NavbarProps) => {
         </li>
       </ul> */}
       <Button onClick={handleToggle}>
-        {theme === 'dark' ? <BiSun /> : <BiMoon />}
+        {theme === 'dark' ? <Icon name='sun' /> : <Icon name='moon' />}
       </Button>
     </nav>
   );

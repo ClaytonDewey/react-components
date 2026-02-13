@@ -6,6 +6,11 @@ nav {
   justify-content: space-between;
   max-width: rem(1320);
   margin-inline: auto;
+  color: var(--text);
+
+  svg {
+    height: rem(20);
+  }
 
   h1 {
     font-size: rem(21.28);
