@@ -24,3 +24,5 @@ const App = () => {
 };
 export default App;
 // https://react-aria.adobe.com/Button
+// https://search.google.com/test/rich-results
+// https://schema.org/
